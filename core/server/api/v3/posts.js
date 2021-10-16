@@ -7,7 +7,8 @@ const unsafeAttrs = ['status', 'authors', 'visibility'];
 
 const messages = {
     postNotFound: 'Post not found.'
-}
+};
+
 const postsService = getPostServiceInstance('v3');
 
 module.exports = {

@@ -1,7 +1,12 @@
 const models = require('../../models');
-const tpl = require('@tryghost/tpl');
 const errors = require('@tryghost/errors');
 const megaService = require('../../services/mega');
+const tpl = require('@tryghost/tpl');
+
+const messages = {
+    emailNotFound: 'Email not found.',
+    retryNotAllowed: 'Only failed emails can be retried'
+};
 
 const messages = {
     emailNotFound: 'Email not found.'
@@ -53,7 +58,11 @@ module.exports = {
 
                     if (model.get('status') !== 'failed') {
                         throw new errors.IncorrectUsageError({
+<<<<<<< HEAD
                             message: tpl(messages.emailNotFound)
+=======
+                            message: tpl(messages.retryNotAllowed)
+>>>>>>> upstream/main
                         });
                     }
 

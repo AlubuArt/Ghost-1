@@ -6,6 +6,9 @@ const models = require('../../models');
 const api = require('./index');
 const ALLOWED_INCLUDES = [];
 const UNSAFE_ATTRS = ['role_id'];
+const messages = {
+    inviteNotFound: 'Invite not found.'
+};
 
 const messages = {
     inviteNotFound: 'Invite not found.'

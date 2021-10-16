@@ -2,10 +2,9 @@ const tpl = require('@tryghost/tpl');
 const errors = require('@tryghost/errors');
 const models = require('../../models');
 const ALLOWED_INCLUDES = ['authors', 'tags'];
-
 const messages = {
     postNotFound: 'Post not found.'
-}
+};
 module.exports = {
     docName: 'preview',
 

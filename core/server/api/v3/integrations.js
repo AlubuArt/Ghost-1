@@ -1,6 +1,6 @@
-const tpl = require('@tryghost/tpl');
 const errors = require('@tryghost/errors');
 const models = require('../../models');
+const tpl = require('@tryghost/tpl');
 const getIntegrationsServiceInstance = require('../../services/integrations/integrations-service');
 
 const messages = {
@@ -11,6 +11,10 @@ const integrationsService = getIntegrationsServiceInstance({
     IntegrationModel: models.Integration,
     ApiKeyModel: models.ApiKey
 });
+
+const messages = {
+    resourceNotFound: '{resource} not found.'
+};
 
 module.exports = {
     docName: 'integrations',

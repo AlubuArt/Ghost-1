@@ -1,7 +1,12 @@
 const Promise = require('bluebird');
-const tpl = require('@tryghost/tpl');
 const errors = require('@tryghost/errors');
 const models = require('../../models');
+const tpl = require('@tryghost/tpl');
+
+const messages = {
+    labelNotFound: 'Label not found.',
+    labelAlreadyExists: 'Label already exists'
+};
 
 const messages = {
     labelNotFound: 'Label not found.',

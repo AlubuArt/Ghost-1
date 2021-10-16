@@ -1,6 +1,9 @@
 const tpl = require('@tryghost/tpl');
 const errors = require('@tryghost/errors');
 const membersService = require('../../services/members');
+const messages = {
+    memberNotFound: 'Member not found.'
+};
 
 const messages = {
     postNotFound: 'Post not found.'
@@ -19,7 +22,7 @@ module.exports = {
 
             if (!model) {
                 throw new errors.NotFoundError({
-                    message: tpl(messages.postNotFound)
+                    message: tpl(messages.memberNotFound)
                 });
             }
 

@@ -2,6 +2,9 @@ const tpl = require('@tryghost/tpl');
 const errors = require('@tryghost/errors');
 const models = require('../../models');
 const ALLOWED_INCLUDES = ['tags', 'authors'];
+const messages = {
+    pageNotFound: 'Page not found'
+};
 
 const messages = {
     postNotFound: 'Post not found.'
@@ -67,7 +70,7 @@ module.exports = {
                 .then((model) => {
                     if (!model) {
                         throw new errors.NotFoundError({
-                            message: tpl(messages.postNotFound)
+                            message: tpl(messages.pageNotFound)
                         });
                     }
 

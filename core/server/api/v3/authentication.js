@@ -1,11 +1,15 @@
 const api = require('./index');
 const config = require('../../../shared/config');
-const tpl = require('@tryghost/tpl');
 const errors = require('@tryghost/errors');
 const web = require('../../web');
 const models = require('../../models');
 const auth = require('../../services/auth');
 const invitations = require('../../services/invitations');
+const tpl = require('@tryghost/tpl');
+
+const messages = {
+    notTheBlogOwner: 'You are not the site owner.'
+};
 
 const messages = {
     notTheBlogOwner: 'You are not the site owner.'

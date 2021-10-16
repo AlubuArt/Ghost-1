@@ -1,8 +1,12 @@
 const Promise = require('bluebird');
-const tpl = require('@tryghost/tpl');
 const errors = require('@tryghost/errors');
 const models = require('../../models');
 const ALLOWED_INCLUDES = ['count.posts'];
+const tpl = require('@tryghost/tpl');
+
+const messages = {
+    notFound: 'Author not found.'
+};
 
 const messages = {
     notFound: 'Author not found.'

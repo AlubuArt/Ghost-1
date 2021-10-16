@@ -9,7 +9,7 @@ const membersService = require('../../services/members');
 
 const messages = {
     error: 'Failed to send email.',
-    accessCoreSettingFromExtReq: 'Attempted to access core setting from external request'  
+    accessCoreSettingFromExtReq: 'Attempted to access core setting from external request'
 };
 
 const settingsBREADService = settingsService.getSettingsBREADServiceInstance();
